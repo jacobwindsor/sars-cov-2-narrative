@@ -52,7 +52,7 @@ const Interaction = props => {
         direction='row'
       >
         <Button
-          icon={props.show ? <FormClose /> : <FormAdd/> }
+          icon={<FormClose />}
           onClick={() => props.setShow(!props.show)}
         />
       </Box>
