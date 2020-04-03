@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Box, Button, Collapsible, Grommet, Heading, Layer, ResponsiveContext } from 'grommet';
 import { FormClose, FormAdd } from 'grommet-icons'
-import theme from './theme'
+import theme from '../theme'
 
 const AppBar = props => (
   <Box 
