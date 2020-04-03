@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Box, Button, Collapsible, Grommet, Heading, Layer, ResponsiveContext } from 'grommet';
+import { Box, Button, Grommet, Heading, ResponsiveContext } from 'grommet';
 import { FormClose, FormAdd } from 'grommet-icons'
 import theme from '../theme'
+import Interaction from './Interaction'
 
 const AppBar = props => (
   <Box 
@@ -27,46 +28,6 @@ const Narrative = props => (
     { ...props }
   />
 )
-
-const Interaction = props => {
-  if (!props.show || props.size !== 'small') return (
-    <Collapsible direction='horizontal' open={props.show}>
-      <Box
-        flex
-        width='medium'
-        background='light-2'
-        elevation='small'
-        align='center'
-        justify='center'
-      >Interaction</Box>
-    </Collapsible>
-  )
-
-  return (
-    <Layer>
-      <Box
-        background='light-2'
-        tag='header'
-        justify='end'
-        align='center'
-        direction='row'
-      >
-        <Button
-          icon={<FormClose />}
-          onClick={() => props.setShow(!props.show)}
-        />
-      </Box>
-      <Box
-       fill
-       background='light-2'
-       align='center'
-       justify='center'
-      >
-        Interaction
-      </Box>
-    </Layer>
-  )
-}
 
 
 const App = () => {
