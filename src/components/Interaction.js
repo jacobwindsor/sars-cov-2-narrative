@@ -1,6 +1,14 @@
 import React from "react";
 import { Box, Button, Collapsible, Layer } from "grommet";
-import { FormClose, FormAdd } from "grommet-icons";
+import { FormClose } from "grommet-icons";
+import { Pvjs } from "@wikipathways/pvjs";
+import ErrorBoundary from "./ErrorBoundary";
+
+const Content = (props) => (
+  <ErrorBoundary>
+    <Pvjs wpId="WP4" />
+  </ErrorBoundary>
+);
 
 export default (props) => {
   if (!props.show || props.size !== "small")
@@ -14,7 +22,7 @@ export default (props) => {
           align="center"
           justify="center"
         >
-          Interaction
+          <Content />
         </Box>
       </Collapsible>
     );
@@ -34,7 +42,7 @@ export default (props) => {
         />
       </Box>
       <Box fill background="light-2" align="center" justify="center">
-        Interaction
+        <Content />
       </Box>
     </Layer>
   );
