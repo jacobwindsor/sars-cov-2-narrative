@@ -1,39 +1,23 @@
 {
   "files": {
-    "main.js": "/sars-cov-2-narrative/static/js/main.d8f5fce5.chunk.js",
-    "main.js.map": "/sars-cov-2-narrative/static/js/main.d8f5fce5.chunk.js.map",
+    "main.css": "/sars-cov-2-narrative/static/css/main.b19c75ad.chunk.css",
+    "main.js": "/sars-cov-2-narrative/static/js/main.00d3f1ab.chunk.js",
+    "main.js.map": "/sars-cov-2-narrative/static/js/main.00d3f1ab.chunk.js.map",
     "runtime-main.js": "/sars-cov-2-narrative/static/js/runtime-main.127b1bf0.js",
     "runtime-main.js.map": "/sars-cov-2-narrative/static/js/runtime-main.127b1bf0.js.map",
-    "static/css/2.18a306db.chunk.css": "/sars-cov-2-narrative/static/css/2.18a306db.chunk.css",
-    "static/js/2.2dcc38a1.chunk.js": "/sars-cov-2-narrative/static/js/2.2dcc38a1.chunk.js",
-    "static/js/2.2dcc38a1.chunk.js.map": "/sars-cov-2-narrative/static/js/2.2dcc38a1.chunk.js.map",
+    "static/js/2.da425a9c.chunk.js": "/sars-cov-2-narrative/static/js/2.da425a9c.chunk.js",
+    "static/js/2.da425a9c.chunk.js.map": "/sars-cov-2-narrative/static/js/2.da425a9c.chunk.js.map",
     "index.html": "/sars-cov-2-narrative/index.html",
-    "precache-manifest.c41ac3906df92dbe420ba381aef1f515.js": "/sars-cov-2-narrative/precache-manifest.c41ac3906df92dbe420ba381aef1f515.js",
+    "precache-manifest.254040614357dfcfa804ddafbbf78b0e.js": "/sars-cov-2-narrative/precache-manifest.254040614357dfcfa804ddafbbf78b0e.js",
     "service-worker.js": "/sars-cov-2-narrative/service-worker.js",
-    "static/css/2.18a306db.chunk.css.map": "/sars-cov-2-narrative/static/css/2.18a306db.chunk.css.map",
-    "static/js/2.2dcc38a1.chunk.js.LICENSE.txt": "/sars-cov-2-narrative/static/js/2.2dcc38a1.chunk.js.LICENSE.txt",
-    "static/media/roboto-fontface.css": "/sars-cov-2-narrative/static/media/Roboto-ThinItalic.8a2c1a5d.woff2",
-    "static/media/WP4846_109857.64685b09.svg": "/sars-cov-2-narrative/static/media/WP4846_109857.64685b09.svg",
-    "static/media/arc.svg": "/sars-cov-2-narrative/static/media/arc.a32529dc.svg",
-    "static/media/brace.svg": "/sars-cov-2-narrative/static/media/brace.45eaf955.svg",
-    "static/media/ellipse.svg": "/sars-cov-2-narrative/static/media/ellipse.25b667a8.svg",
-    "static/media/endoplasmic-reticulum.svg": "/sars-cov-2-narrative/static/media/endoplasmic-reticulum.e6447561.svg",
-    "static/media/golgi-apparatus.svg": "/sars-cov-2-narrative/static/media/golgi-apparatus.61f4a3d3.svg",
-    "static/media/hexagon.svg": "/sars-cov-2-narrative/static/media/hexagon.caf7947e.svg",
-    "static/media/mim-degradation.svg": "/sars-cov-2-narrative/static/media/mim-degradation.3db52f41.svg",
-    "static/media/mitochondria.svg": "/sars-cov-2-narrative/static/media/mitochondria.1c927193.svg",
-    "static/media/none.svg": "/sars-cov-2-narrative/static/media/none.d79467dc.svg",
-    "static/media/octagon.svg": "/sars-cov-2-narrative/static/media/octagon.0b1d3eb8.svg",
-    "static/media/pentagon.svg": "/sars-cov-2-narrative/static/media/pentagon.09f2e414.svg",
-    "static/media/rectangle.svg": "/sars-cov-2-narrative/static/media/rectangle.9c1bbe1b.svg",
-    "static/media/rounded-rectangle.svg": "/sars-cov-2-narrative/static/media/rounded-rectangle.cffdf8ec.svg",
-    "static/media/sarcoplasmic-reticulum.svg": "/sars-cov-2-narrative/static/media/sarcoplasmic-reticulum.63f6b74a.svg",
-    "static/media/triangle.svg": "/sars-cov-2-narrative/static/media/triangle.3edea1b4.svg"
+    "static/css/main.b19c75ad.chunk.css.map": "/sars-cov-2-narrative/static/css/main.b19c75ad.chunk.css.map",
+    "static/js/2.da425a9c.chunk.js.LICENSE.txt": "/sars-cov-2-narrative/static/js/2.da425a9c.chunk.js.LICENSE.txt",
+    "static/media/WP4846_109857.64685b09.svg": "/sars-cov-2-narrative/static/media/WP4846_109857.64685b09.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.127b1bf0.js",
-    "static/css/2.18a306db.chunk.css",
-    "static/js/2.2dcc38a1.chunk.js",
-    "static/js/main.d8f5fce5.chunk.js"
+    "static/js/2.da425a9c.chunk.js",
+    "static/css/main.b19c75ad.chunk.css",
+    "static/js/main.00d3f1ab.chunk.js"
   ]
 }
