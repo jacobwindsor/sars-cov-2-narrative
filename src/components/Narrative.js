@@ -3,6 +3,13 @@ import { Box, Button, Footer, Markdown, Heading } from "grommet";
 import { LinkNext, LinkPrevious } from "grommet-icons";
 import ErrorBoundary from "./ErrorBoundary";
 
+const markdownComponents = {
+  p: {
+    component: "Paragraph",
+    props: { maxWidth: "auto" },
+  },
+};
+
 export default ({
   setShowInteraction,
   showInteraction,
@@ -32,7 +39,9 @@ export default ({
         ref={scrollingContainer}
       >
         <Heading>{title}</Heading>
-        <Markdown size="fill">{markdown}</Markdown>
+        <Markdown size="fill" components={markdownComponents}>
+          {markdown}
+        </Markdown>
         <Footer margin={{ top: "small" }} direction="row" justify="between">
           <Button
             icon={<LinkPrevious />}
