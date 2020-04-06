@@ -19,7 +19,7 @@ const Content = (props) => {
 };
 
 export default (props) => {
-  if (!props.show || props.size !== "small")
+  if (props.show)
     return (
       <Box
         gridArea="interaction"
@@ -33,24 +33,4 @@ export default (props) => {
         <Content />
       </Box>
     );
-
-  return (
-    <Layer>
-      <Box
-        background="light-2"
-        tag="header"
-        justify="end"
-        align="center"
-        direction="row"
-      >
-        <Button
-          icon={<FormClose />}
-          onClick={() => props.setShow(!props.show)}
-        />
-      </Box>
-      <Box fill background="light-2" align="center" justify="center">
-        <Content />
-      </Box>
-    </Layer>
-  );
 };

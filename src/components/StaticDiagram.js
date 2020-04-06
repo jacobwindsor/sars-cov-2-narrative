@@ -1,5 +1,5 @@
 import svgPanZoom from "svg-pan-zoom";
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, forwardRef } from "react";
 import { ReactComponent as Diag } from "./WP4846_109857.svg";
 
 export default (props) => {
