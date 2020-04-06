@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Box, Button, Collapsible, Layer } from "grommet";
+import { Box, Image } from "grommet";
 import { FormClose } from "grommet-icons";
 import { Pvjs } from "@wikipathways/pvjs";
 import ErrorBoundary from "./ErrorBoundary";
@@ -21,8 +21,7 @@ const usePathway = (wpId) => {
   return [pathway, entitesById];
 };
 
-const Pathway = (props) => {
-  const wpId = "WP4846";
+const Pathway = ({ wpId }) => {
   const [pathway, entitiesById] = usePathway(wpId);
 
   if (pathway && entitiesById)
@@ -40,24 +39,33 @@ const Pathway = (props) => {
   return <p>Loading...</p>;
 };
 
-const Content = (props) => {
+const Illustration = ({ image }) => (
+  <Image
+    src={`${process.env.PUBLIC_URL}/images/${image}`}
+    fit="cover"
+    alignSelf="center"
+    fill
+  />
+);
+
+const Content = ({ wpId, image }) => {
   return (
     <ErrorBoundary>
-      <Pathway />
+      {wpId ? <Pathway wpId={wpId} /> : ""}
+      {image ? <Illustration image={image} /> : ""}
     </ErrorBoundary>
   );
 };
 
-export default (props) => {
-  if (props.show)
-    return (
-      <Box
-        gridArea="interaction"
-        background="light-2"
-        align="center"
-        justify="center"
-      >
-        <Content />
-      </Box>
-    );
+export default ({ wpId, image }) => {
+  return (
+    <Box
+      gridArea="interaction"
+      background="light-2"
+      align="center"
+      justify="center"
+    >
+      <Content wpId={wpId} image={image} />
+    </Box>
+  );
 };

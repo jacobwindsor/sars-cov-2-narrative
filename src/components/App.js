@@ -7,7 +7,6 @@ import {
   ResponsiveContext,
   Grid,
 } from "grommet";
-import { FormClose, FormAdd } from "grommet-icons";
 import theme from "../theme";
 import Interaction from "./Interaction";
 import Narrative from "./Narrative";
@@ -35,14 +34,14 @@ const AppBar = (props) => (
 const Content = ({
   title,
   markdown,
-  showInteraction,
-  setShowInteraction,
   size,
   nextPage,
   prevPage,
   contents,
   setPage,
   currentPage,
+  wpId,
+  image,
 }) => (
   <>
     {size == "large" ? (
@@ -53,16 +52,10 @@ const Content = ({
     <Narrative
       title={title}
       markdown={markdown}
-      showInteraction={showInteraction}
-      setShowInteraction={setShowInteraction}
       nextPage={nextPage}
       prevPage={prevPage}
     />
-    <Interaction
-      show={showInteraction}
-      setShow={setShowInteraction}
-      size={size}
-    />
+    <Interaction size={size} wpId={wpId} image={image} />
   </>
 );
 
@@ -92,7 +85,6 @@ const usePageData = (pageNumber, contents) => {
 };
 
 const App = () => {
-  const [showInteraction, setShowInteraction] = useState(true);
   const [pageNumber, setPageNumber] = useState(0);
 
   const contents = useContents();
@@ -171,8 +163,6 @@ const App = () => {
               <Content
                 title={pageData.title}
                 markdown={pageData.markdown}
-                showInteraction={showInteraction}
-                setShowInteraction={setShowInteraction}
                 size={size}
                 setPageNumber={setPageNumber}
                 nextPage={nextPageNumber}
@@ -180,6 +170,8 @@ const App = () => {
                 contents={contents}
                 setPage={setPageNumber}
                 currentPage={pageNumber}
+                wpId={pageData.wpId}
+                image={pageData.image}
               />
             ) : (
               <LoadingShimmer size={size} />

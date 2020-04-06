@@ -3,14 +3,7 @@ import { Box, Button, Footer, Markdown, Heading } from "grommet";
 import { LinkNext, LinkPrevious } from "grommet-icons";
 import ErrorBoundary from "./ErrorBoundary";
 
-export default ({
-  setShowInteraction,
-  showInteraction,
-  title,
-  markdown,
-  nextPage,
-  prevPage,
-}) => {
+export default ({ title, markdown, nextPage, prevPage }) => {
   const scrollingContainer = useRef(null);
 
   useEffect(() => {
