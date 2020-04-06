@@ -1,17 +1,5 @@
 import React from "react";
-import { Box, Button } from "grommet";
-
-const getNavItems = (contents, setPage, currentPage) =>
-  contents.map((page, i) => (
-    <Button
-      margin={{ bottom: "small" }}
-      label={page.title}
-      plain
-      onClick={() => setPage(i)}
-      active={i === currentPage}
-      key={i.toString()}
-    />
-  ));
+import { Box, List } from "grommet";
 
 export default ({ contents, setPage, currentPage }) => (
   <Box
@@ -19,6 +7,11 @@ export default ({ contents, setPage, currentPage }) => (
     gridArea="nav"
     background="light-2"
   >
-    {getNavItems(contents, setPage, currentPage)}
+    <List
+      border={{ color: "transparent" }}
+      primaryKey="title"
+      data={contents}
+      onClickItem={({ index }) => setPage(index)}
+    />
   </Box>
 );

@@ -27,8 +27,13 @@ const Pathway = (props) => {
 
   if (pathway && entitiesById)
     return (
-      <div style={{ width: "100%", height: "100%" }}>
-        <Pvjs pathway={pathway} entitiesById={entitiesById} theme="plain" />
+      <div style={{ width: "100%", height: "100%", overflow: "hidden" }}>
+        <Pvjs
+          pathway={pathway}
+          entitiesById={entitiesById}
+          theme="plain"
+          hiddenEntites={["b920a", "a9a90"]}
+        />
       </div>
     );
 
