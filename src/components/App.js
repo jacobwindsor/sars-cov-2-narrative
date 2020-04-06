@@ -12,6 +12,7 @@ import theme from "../theme";
 import Interaction from "./Interaction";
 import Narrative from "./Narrative";
 import Nav from "./Nav";
+import LoadingShimmer from "./LoadingShimmer";
 
 const AppBar = (props) => (
   <Box
@@ -30,8 +31,6 @@ const AppBar = (props) => (
     </Heading>
   </Box>
 );
-
-const Loading = (props) => <p>Loading...</p>;
 
 const Content = ({
   title,
@@ -63,7 +62,7 @@ const Content = ({
 );
 
 const useContents = () => {
-  const [contents, setContents] = useState(null);
+  const [contents, setContents] = useState([]);
 
   useEffect(() => {
     fetch(`${process.env.PUBLIC_URL}/data/mapping.json`)
@@ -78,6 +77,7 @@ const usePageData = (pageNumber, contents) => {
 
   useEffect(() => {
     contents &&
+      contents.length > 0 &&
       fetch(`${process.env.PUBLIC_URL}/data/${contents[pageNumber].file}`)
         .then((res) => res.json())
         .then(setPageData);
@@ -125,18 +125,43 @@ const App = () => {
       ];
   };
 
+  const getRows = (size) => {
+    switch (size) {
+      case "large":
+        return ["xsmall", "flex"];
+      case "medium":
+        return ["xsmall", "flex"];
+      case "small":
+        return ["xsmall", "flex", "flex"];
+      default:
+        return ["xsmall", "flex"];
+    }
+  };
+
+  const getColumns = (size) => {
+    switch (size) {
+      case "large":
+        return ["small", "flex", "flex"];
+      case "medium":
+        return ["flex", "flex"];
+      case "small":
+        return ["flex"];
+      default:
+        return ["small", "flex", "flex"];
+    }
+  };
+
   return (
     <Grommet theme={theme} full>
       <ResponsiveContext.Consumer>
         {(size) => (
           <Grid
             areas={getGridAreas(size)}
-            rows={["fill", "fill", "fill"]}
-            columns={["auto", "auto", "auto"]}
+            rows={getRows(size)}
+            columns={getColumns(size)}
             fill
           >
             <AppBar size={size} gridArea="header" />
-
             {pageData ? (
               <Content
                 title={pageData.title}
@@ -151,7 +176,7 @@ const App = () => {
                 setPage={setPageNumber}
               />
             ) : (
-              <Loading gridArea="main" />
+              <LoadingShimmer size={size} />
             )}
           </Grid>
         )}

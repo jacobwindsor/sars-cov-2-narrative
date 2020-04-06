@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import { Box, Button, Footer, Markdown, Main, Heading } from "grommet";
-import { FormClose, FormAdd, LinkNext, LinkPrevious } from "grommet-icons";
+import { Box, Button, Footer, Markdown, Heading } from "grommet";
+import { LinkNext, LinkPrevious } from "grommet-icons";
 import ErrorBoundary from "./ErrorBoundary";
 
 export default ({

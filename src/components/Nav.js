@@ -13,7 +13,7 @@ const getNavItems = (contents, setPage) =>
   ));
 
 export default ({ contents, setPage }) => (
-  <Box pad="small" gridArea="nav" width="small">
+  <Box pad="small" gridArea="nav">
     {getNavItems(contents, setPage)}
   </Box>
 );

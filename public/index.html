@@ -29,12 +29,17 @@
         margin: 0;
       }
 
+      /* Some styles that couldn't be applied in react. TODO: Use styled components */
       .hide-scroll {
         -webkit-overflow-scrolling: touch;
         -ms-overflow-style: none;
       }
       .hide-scroll::-webkit-scrollbar {
         display: none;
+      }
+
+      .infinite-animation {
+        animation-iteration-count: infinite !important;
       }
     </style>
     <title>%REACT_APP_APP_NAME%</title>

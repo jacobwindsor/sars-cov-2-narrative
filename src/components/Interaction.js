@@ -24,7 +24,6 @@ export default (props) => {
       <Box
         gridArea="interaction"
         position="fixed"
-        width="fill"
         background="light-2"
         elevation="small"
         align="center"
