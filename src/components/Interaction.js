@@ -5,15 +5,40 @@ import { Pvjs } from "@wikipathways/pvjs";
 import ErrorBoundary from "./ErrorBoundary";
 import StaticDiagram from "./StaticDiagram";
 
+const usePathway = (wpId) => {
+  const [pathway, setPathway] = useState(null);
+  const [entitesById, setEntitiesById] = useState(null);
+
+  useEffect(() => {
+    fetch(`${process.env.PUBLIC_URL}/pathways/${wpId}.json`)
+      .then((res) => res.json())
+      .then((json) => {
+        setPathway(json.pathway);
+        setEntitiesById(json.entitiesById);
+      });
+  }, [wpId]);
+
+  return [pathway, entitesById];
+};
+
 const Pathway = (props) => {
-  console.log(props.pathway);
-  return <Pvjs wpId={props.wpId} theme="plain" />;
+  const wpId = "WP4846";
+  const [pathway, entitiesById] = usePathway(wpId);
+
+  if (pathway && entitiesById)
+    return (
+      <div style={{ width: "100%", height: "100%" }}>
+        <Pvjs pathway={pathway} entitiesById={entitiesById} theme="plain" />
+      </div>
+    );
+
+  return <p>Loading...</p>;
 };
 
 const Content = (props) => {
   return (
     <ErrorBoundary>
-      <StaticDiagram />
+      <Pathway />
     </ErrorBoundary>
   );
 };
@@ -23,9 +48,7 @@ export default (props) => {
     return (
       <Box
         gridArea="interaction"
-        position="fixed"
         background="light-2"
-        elevation="small"
         align="center"
         justify="center"
       >

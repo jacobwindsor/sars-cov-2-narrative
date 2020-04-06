@@ -14,7 +14,6 @@ export default ({
   const scrollingContainer = useRef(null);
 
   useEffect(() => {
-    console.log(scrollingContainer);
     if (scrollingContainer.current) {
       scrollingContainer.current.scrollTop = 0;
     }
@@ -29,6 +28,7 @@ export default ({
         overflow="auto"
         gridArea="main"
         className="hide-scroll"
+        elevation="small"
         ref={scrollingContainer}
       >
         <Heading>{title}</Heading>

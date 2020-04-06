@@ -42,9 +42,14 @@ const Content = ({
   prevPage,
   contents,
   setPage,
+  currentPage,
 }) => (
   <>
-    {size == "large" ? <Nav contents={contents} setPage={setPage} /> : ""}
+    {size == "large" ? (
+      <Nav contents={contents} setPage={setPage} currentPage={currentPage} />
+    ) : (
+      ""
+    )}
     <Narrative
       title={title}
       markdown={markdown}
@@ -174,6 +179,7 @@ const App = () => {
                 prevPage={prevPageNumber}
                 contents={contents}
                 setPage={setPageNumber}
+                currentPage={pageNumber}
               />
             ) : (
               <LoadingShimmer size={size} />
