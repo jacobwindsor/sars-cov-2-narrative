@@ -75,19 +75,48 @@ const usePageData = (pageNumber, contents) => {
   const [pageData, setPageData] = useState(null);
 
   useEffect(() => {
-    contents &&
-      contents.length > 0 &&
-      fetch(`${process.env.PUBLIC_URL}/data/${contents[pageNumber].file}`)
-        .then((res) => res.json())
-        .then(setPageData);
+    try {
+      contents &&
+        contents.length > 0 &&
+        fetch(`${process.env.PUBLIC_URL}/data/${contents[pageNumber].file}`)
+          .then((res) => res.json())
+          .then(setPageData);
+    } catch (e) {
+      if (e instanceof TypeError) {
+        throw new Error(`404: Page ${pageNumber} doesn't exist.`);
+      }
+      throw e;
+    }
   }, [pageNumber, contents]);
 
   return pageData;
 };
 
-const App = () => {
-  const [pageNumber, setPageNumber] = useState(0);
+const useHistory = (pageNumber, title) => {
+  useEffect(() => {
+    window.history.pushState(
+      { pageNumber: pageNumber },
+      title,
+      "/" + pageNumber
+    );
+  }, [pageNumber]);
+};
 
+const getCurPage = () => {
+  try {
+    const pathname = window.location.pathname;
+    const pageNumber = parseInt(pathname.replace("/", ""));
+    if (isNaN(pageNumber)) throw Error("Tried to use NaN as page number");
+    return pageNumber;
+  } catch (e) {
+    console.log(e);
+    return 0;
+  }
+};
+
+const App = () => {
+  const [pageNumber, setPageNumber] = useState(getCurPage());
+  useHistory(pageNumber);
   const contents = useContents();
   const pageData = usePageData(pageNumber, contents);
 
