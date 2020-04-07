@@ -3,14 +3,14 @@
     "static/js/0.e76bc0a8.chunk.js": "/sars-cov-2-narrative/static/js/0.e76bc0a8.chunk.js",
     "static/js/0.e76bc0a8.chunk.js.map": "/sars-cov-2-narrative/static/js/0.e76bc0a8.chunk.js.map",
     "main.css": "/sars-cov-2-narrative/static/css/main.b19c75ad.chunk.css",
-    "main.js": "/sars-cov-2-narrative/static/js/main.dc09f8c9.chunk.js",
-    "main.js.map": "/sars-cov-2-narrative/static/js/main.dc09f8c9.chunk.js.map",
+    "main.js": "/sars-cov-2-narrative/static/js/main.4a5e31e8.chunk.js",
+    "main.js.map": "/sars-cov-2-narrative/static/js/main.4a5e31e8.chunk.js.map",
     "runtime-main.js": "/sars-cov-2-narrative/static/js/runtime-main.f0d47c99.js",
     "runtime-main.js.map": "/sars-cov-2-narrative/static/js/runtime-main.f0d47c99.js.map",
     "static/js/3.5f5ef653.chunk.js": "/sars-cov-2-narrative/static/js/3.5f5ef653.chunk.js",
     "static/js/3.5f5ef653.chunk.js.map": "/sars-cov-2-narrative/static/js/3.5f5ef653.chunk.js.map",
     "index.html": "/sars-cov-2-narrative/index.html",
-    "precache-manifest.e6c1559a7bc348ec92b5465269c849d2.js": "/sars-cov-2-narrative/precache-manifest.e6c1559a7bc348ec92b5465269c849d2.js",
+    "precache-manifest.4c5bd69558429c32ff105919dcbbe009.js": "/sars-cov-2-narrative/precache-manifest.4c5bd69558429c32ff105919dcbbe009.js",
     "service-worker.js": "/sars-cov-2-narrative/service-worker.js",
     "static/css/main.b19c75ad.chunk.css.map": "/sars-cov-2-narrative/static/css/main.b19c75ad.chunk.css.map",
     "static/js/3.5f5ef653.chunk.js.LICENSE.txt": "/sars-cov-2-narrative/static/js/3.5f5ef653.chunk.js.LICENSE.txt",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.f0d47c99.js",
     "static/js/3.5f5ef653.chunk.js",
     "static/css/main.b19c75ad.chunk.css",
-    "static/js/main.dc09f8c9.chunk.js"
+    "static/js/main.4a5e31e8.chunk.js"
   ]
 }
