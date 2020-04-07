@@ -25,7 +25,7 @@ const AppBar = (props) => (
     style={{ zIndex: "1" }}
     {...props}
   >
-    <Heading level="3" margin="none">
+    <Heading level="3" margin="none" color="light-1">
       {process.env.REACT_APP_APP_NAME}
     </Heading>
   </Box>
