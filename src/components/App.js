@@ -42,6 +42,7 @@ const Content = ({
   currentPage,
   wpId,
   image,
+  component,
 }) => (
   <>
     {size == "large" ? (
@@ -55,7 +56,7 @@ const Content = ({
       nextPage={nextPage}
       prevPage={prevPage}
     />
-    <Interaction size={size} wpId={wpId} image={image} />
+    <Interaction size={size} wpId={wpId} image={image} component={component} />
   </>
 );
 
@@ -172,6 +173,7 @@ const App = () => {
                 currentPage={pageNumber}
                 wpId={pageData.wpId}
                 image={pageData.image}
+                component={pageData.component}
               />
             ) : (
               <LoadingShimmer size={size} />
