@@ -5,6 +5,10 @@
   },
   {
     "file": "second.json",
-    "title": "Second"
+    "title": "With Pathway"
+  },
+  {
+    "file": "third.json",
+    "title": "With Data"
   }
 ]
