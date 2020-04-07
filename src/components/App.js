@@ -1,35 +1,11 @@
 import React, { useState, useEffect } from "react";
-import {
-  Box,
-  Button,
-  Grommet,
-  Heading,
-  ResponsiveContext,
-  Grid,
-} from "grommet";
+import { Grommet, ResponsiveContext, Grid } from "grommet";
 import theme from "../theme";
 import Interaction from "./Interaction";
 import Narrative from "./Narrative";
 import Nav from "./Nav";
 import LoadingShimmer from "./LoadingShimmer";
-
-const AppBar = (props) => (
-  <Box
-    tag="header"
-    direction="row"
-    align="center"
-    justify="between"
-    background="brand"
-    pad={{ left: "medium", right: "small", vertical: "small" }}
-    elevation="medium"
-    style={{ zIndex: "1" }}
-    {...props}
-  >
-    <Heading level="3" margin="none" color="light-1">
-      {process.env.REACT_APP_APP_NAME}
-    </Heading>
-  </Box>
-);
+import AppBar from "./AppBar";
 
 const Content = ({
   title,
@@ -155,13 +131,13 @@ const App = () => {
   const getRows = (size) => {
     switch (size) {
       case "large":
-        return ["xsmall", "flex"];
+        return ["xxsmall", "flex"];
       case "medium":
-        return ["xsmall", "flex"];
+        return ["xxsmall", "flex"];
       case "small":
-        return ["xsmall", "flex", "flex"];
+        return ["xxsmall", "flex", "flex"];
       default:
-        return ["xsmall", "flex"];
+        return ["xxsmall", "flex"];
     }
   };
 
